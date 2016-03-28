@@ -1,0 +1,36 @@
+if you do not have node installed
+  brew install node
+do the following installations:
+  npm install
+  bower install
+  npm install -g bower
+  brew install watchman
+  npm install -g ember-cli
+
+To start new project cd into the directory you like the app to be located:
+To create app directory use following command:
+  ember new name-of-directory
+
+To generate/create route files;
+  ember generate route "file name"
+  or
+  ember g route "file name"
+
+To create model files:
+  ember g model "file name"
+
+To create Component files:
+  ember g Component "file Name"
+
+To start the ember server:
+  ember server
+  or
+  ember s
+
+To install EmberFire(to use Firebase):
+  ember install emberFire
+  create Firebase account
+  create new app,
+  on config/enviroment.js: in var ENV = { firebase: "This have to be the Firebase app link you have created"}
+  To export data to FireBase: create json file with all of the date at the top level of project folder.
+  on Firebase(in the app you created,  select "Import Date button")

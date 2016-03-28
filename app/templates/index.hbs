@@ -1,0 +1,16 @@
+<h1> Welcome to Super Rentals </h1>
+
+<p>We hope you find exactly what you're looking for in a place to stay.</p>
+
+<ul>
+  {{#each model as |rental|}}
+    {{rental-tile rental=rental destroyRental="destroyRental"}}
+    <!-- rental on the left of = refers to variable name used in within component(in this case rental-tile.hbs component) rental on the right of  = refers to tohe object we're assigning to that variable name (in this case |rental|) -->
+  {{/each}}
+</ul>
+
+{{new-rental save2="save3"}}
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
+{{#link-to 'announcement'}}Announcements{{/link-to}}
