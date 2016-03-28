@@ -4,7 +4,7 @@
 
 <ul>
   {{#each model as |rental|}}
-    {{rental-tile rental=rental destroyRental="destroyRental"}}
+    {{rental-tile rental=rental update="update" destroyRental="destroyRental"}}
     <!-- rental on the left of = refers to variable name used in within component(in this case rental-tile.hbs component) rental on the right of  = refers to tohe object we're assigning to that variable name (in this case |rental|) -->
   {{/each}}
 </ul>
