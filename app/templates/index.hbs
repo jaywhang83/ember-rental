@@ -2,14 +2,28 @@
 
 We hope you find exactly what you're looking for in a place to stay.
 
+<h2>Available Rentals</h2>
+
 <ul>
-  {{#each model as |rental|}}
-    {{rental-tile rental=rental update="update" destroyRental="destroyRental"}}
+  {{#each model.rentals as |rental|}}
+    {{rental-tile rental=rental}}
     <!-- rental on the left of = refers to variable name used in within component(in this case rental-tile.hbs component) rental on the right of  = refers to tohe object we're assigning to that variable name (in this case |rental|) -->
   {{/each}}
 </ul>
 
 {{new-rental save2="save3"}}
+
+<h2>Cities</h2>
+
+<ul>
+  {{#each model.cities as |city|}}
+    <li>{{city.name}}</li>
+  {{/each}}
+</ul>
+
+
+{{new-city saveCity="saveCity"}}
+<hr>
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}

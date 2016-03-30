@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('rental');
+    return Ember.RSVP.hash ({
+      cities: this.store.findAll('city'),
+      rentals: this.store.findAll('rental')
+    });
   },
 
   actions: {
@@ -11,5 +14,11 @@ export default Ember.Route.extend({
       newRental.save();
       this.transitionTo('index');
     },
+
+    saveCity(params) {
+      var newCity = this.store.createRecord('city', params);
+      newCity.save();
+      this.transitionTo('index');
+    }
   }
 });
