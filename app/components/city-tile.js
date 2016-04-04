@@ -6,7 +6,8 @@ export default Ember.Component.extend({
   }),
 
   sortBy: ['cost:asc'],
-  sortedRentals: Ember.computed.sort('city.rentals', 'sortBy')
+  sortedRentals: Ember.computed.sort('city.rentals', 'sortBy'),
+  
   updateCityForm: false,
   actions: {
     delete(city) {
