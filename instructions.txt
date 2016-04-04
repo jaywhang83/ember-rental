@@ -34,3 +34,6 @@ To install EmberFire(to use Firebase):
   on config/enviroment.js: in var ENV = { firebase: "This have to be the Firebase app link you have created"}
   To export data to FireBase: create json file with all of the date at the top level of project folder.
   on Firebase(in the app you created,  select "Import Date button")
+
+gmapsApi
+// AIzaSyAzAaveXGgtLi_i9kmMInxo0lr5Yxnlo2A

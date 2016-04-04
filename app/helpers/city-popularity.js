@@ -4,7 +4,7 @@ export function cityPopularity(params) {
   var city = params[0];
 
   if(city.get('rentals').get('length') >= 5) {
-    return Ember.String.htmlSafe('<span class="glyphicon glyphicon-fire"></span>')
+    return Ember.String.htmlSafe('<span class="glyphicon glyphicon-fire"></span>');
   }
 }
 
